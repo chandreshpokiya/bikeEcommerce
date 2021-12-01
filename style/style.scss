@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #101013;
+    --light--bk: #2F3135;
+    --border: 1px solid rgba(255,255,255,.3);
+    --main:#00B38A;
+}
+
+body{
+    background-color: var(--black);
+    font-family: 'Montserrat',
+    sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar{
+        width: .8rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: #eee;
+        border-radius: 50rem;
+    }
+
+}
+
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+ul li{
+    list-style: none;
+}
+
+section{
+    padding: 16px 0;
+}
+
+// ------------------------------------HEADER
+
+header{
+    height: 70px;
+    padding-top: 10px;
+    // border-bottom: var(--border);
+
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        height: 100%;
+        padding: 10px 0;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Raleway',
+                sans-serif;
+            font-size: 40px;
+            padding-right: 10px;
+        }
+        .fas{
+            color: var(--main);
+            font-size: 45px;
+        }
+    }
+
+
+    .nav ul{
+        display: flex;
+        height: 100%;
+    }
+
+    .nav ul li{
+        margin: auto 0;
+
+        a{
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--main);
+            }
+            
+        }
+    }
+
+    .menu-icon{
+        display: flex;
+        align-items: center;
+
+        a{
+            font-size: 1.7rem;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--main);
+            }
+        }
+
+        #menu{
+            display: none;
+        }
+    }
+
+}
+
+
+// ----------------------------------- HOME/BANNER SECTION
+
+.banner .banner-box{
+    height: 700px;
+    background-image: linear-gradient(to right, #2f3135, #313236, #323337, #343538, #353639);
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(../assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 9;
+
+    &:before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    h1{
+        font-size: 10rem;
+        font-family: 'Montserrat',
+        sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 50px;
+        margin-top: 20px;
+        color: var(--main);
+        z-index: 94866546;
+
+        span{
+            font-size: 20rem;
+            line-height: 20rem;
+            color: white;
+        }
+    }
+
+    h2{
+        position: absolute;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing:10px;
+        bottom: 10px;
+        right: 10px;
+        font-weight: 500;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+        padding: 20px 30px;
+        background-color: var(--main);
+        border-radius: 50px;
+        margin-left: 50px;
+        transition: all .3s;
+        z-index: 68746564646;
+
+        &:hover{
+            background-color: var(--light--bk);
+            letter-spacing: 1.5px;
+        }
+
+    }
+}
+
+.logo img{
+    width: 150px;
+    // margin-top: -15px;
+}
